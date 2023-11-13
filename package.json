@@ -1,0 +1,56 @@
+{
+  "name": "ha-lovelace-tsclock",
+  "version": "1.2.4",
+  "description": "Home Assistant Digital Clock",
+  "keywords": [
+    "home-assistant",
+    "homeassistant",
+    "hass",
+    "automation",
+    "lovelace",
+    "custom-cards"
+  ],
+  "module": "dist/DigitalClock.js",
+  "repository": "git@github.comtrollix/ha-lovelace-tsclock.git",
+  "author": "Trollix <trollix@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@formatjs/ecma402-abstract": "^1.17.4",
+    "custom-card-helpers": "^1.9.0",
+    "lit": "^2.8.0",
+    "luxon": "^3.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.23.3",
+    "@babel/plugin-syntax-decorators": "^7.23.3",
+    "@types/luxon": "^3.3.4",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.4.0",
+    "rollup-plugin-serve": "^2.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "start": "rollup -c rollup.config.dev.js --watch",
+    "build": "npm run lint && npm run rollup",
+    "lint": "eslint src/*.ts",
+    "rollup": "rollup -c"
+  }
+}
