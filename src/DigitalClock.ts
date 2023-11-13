@@ -21,7 +21,7 @@ console.info(
     description: 'A digital clock component',
 });
 */
-
+/*
 // Define a type for the custom card
 interface CustomCard {
     type: string;
@@ -50,6 +50,22 @@ interface CustomCard {
   globalWindow.customCards.push(newCard);
 
   // FIN de la définition de la custom card
+
+*/
+  // Allow this card to appear in the card chooser menu
+  export interface WindowWithCards extends Window {
+    customCards: unknown[];
+  }
+
+const windowWithCards = window as unknown as WindowWithCards;
+windowWithCards.customCards = windowWithCards.customCards || [];
+windowWithCards.customCards.push({
+    type: 'ha-tsclock',
+    name: "DigitalClock",
+    preview: true,
+    description: "A digital clock component"
+});
+
 
 
 @customElement('ha-tsclock')
