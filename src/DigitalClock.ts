@@ -12,46 +12,7 @@ console.info(
     'color: white; font-weight: bold; background: dimgray',
 );
 
-// This puts your card into the UI card picker dialog
-/* -->  Par Chat Gpt
-(window as any).customCards = (window as any).customCards || [];
-(window as any).customCards.push({
-    type: 'ha-lovalace-tsclock',
-    name: 'DigitalClock',
-    description: 'A digital clock component',
-});
-*/
-/*
-// Define a type for the custom card
-interface CustomCard {
-    type: string;
-    name: string;
-    description: string;
-  }
-  
-  // Extend the Window interface to include customCards
-  interface WindowWithCustomCards extends Window {
-    customCards?: CustomCard[];
-  }
-  
-  // Access the global window object
-  const globalWindow: WindowWithCustomCards = window;
-  
-  // Access or create the customCards array
-  globalWindow.customCards = globalWindow.customCards || [];
-  
-  // Push the custom card object into the array
-  const newCard: CustomCard = {
-    type: 'ha-tsclock',
-    name: 'DigitalClock',
-    description: 'A digital clock component',
-  };
-  
-  globalWindow.customCards.push(newCard);
 
-  // FIN de la définition de la custom card
-
-*/
   // Allow this card to appear in the card chooser menu
   export interface WindowWithCards extends Window {
     customCards: unknown[];
