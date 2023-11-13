@@ -7,7 +7,7 @@ import { CARD_VERSION} from './const';
 import IDigitalClockConfig from './IDigitalClockConfig';
 
 console.info(
-    `%c  TIX Simple Clock  %c  Version ${CARD_VERSION}    `,
+    `%c  TIX-SIMPLE-CLOCK  %c  Version ${CARD_VERSION}    `,
     'color: white; font-weight: bold; background: crimson',
     'color: white; font-weight: bold; background: dimgray',
 );
