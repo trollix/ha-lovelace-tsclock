@@ -1,6 +1,6 @@
 {
   "name": "ha-lovelace-tsclock",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Home Assistant Digital Clock",
   "keywords": [
     "home-assistant",

@@ -61,7 +61,7 @@ const windowWithCards = window as unknown as WindowWithCards;
 windowWithCards.customCards = windowWithCards.customCards || [];
 windowWithCards.customCards.push({
     type: 'ha-tsclock',
-    name: "DigitalClock",
+    name: "HA-TsClock",
     preview: true,
     description: "A digital clock component"
 });
