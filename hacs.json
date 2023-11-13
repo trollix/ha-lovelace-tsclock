@@ -1,4 +1,5 @@
 {
     "name": "Digital Clock",
-    "render_readme": true
+    "render_readme": true,
+    "filename": "DigitalClock.js"
 }
