@@ -34,7 +34,7 @@ export default [
   {
     input: 'src/DigitalClock.ts',
     output: {
-      dir: './dist/DigitalClock.js',
+      dir: './dist',
       format: 'es',
     },
     plugins: [...plugins],
