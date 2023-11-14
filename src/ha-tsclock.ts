@@ -90,6 +90,7 @@ export class Tsclock extends LitElement {
     private async _updateDateTime(): Promise<void> {
         const timeZone = this._config?.timeZone ?? this.hass?.config?.time_zone;
         const locale = this._config?.locale ?? this.hass?.locale?.language;
+        const capitalize = this._config?.capitalize ?? "false";
 
         let dateTime: DateTime = DateTime.local();
         /* if (!this._config?.useHATime) {
@@ -125,6 +126,13 @@ export class Tsclock extends LitElement {
             this._firstLine = firstLine;
         if (secondLine !== this._secondLine)
             this._secondLine = secondLine;
+
+        if (capitalize) {
+            let str = this._secondLine;
+            str = str[0].toUpperCase() + str.slice(1);
+            this._secondLine = str;
+        }
+            
     }
 
     public disconnectedCallback(): void {

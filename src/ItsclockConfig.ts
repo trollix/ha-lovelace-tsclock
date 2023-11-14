@@ -9,4 +9,5 @@ export default interface ItsclockConfig {
     locale?: string;
     firstLineFormat?: (LocaleOptions & DateTimeFormatOptions) | string;
     secondLineFormat?: (LocaleOptions & DateTimeFormatOptions) | string;
+    capitalize?: string;
 }
