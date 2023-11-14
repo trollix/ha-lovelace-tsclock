@@ -3,13 +3,14 @@ import { customElement, property, state } from 'lit/decorators.js'
 import { DateTime } from 'luxon';
 import { HomeAssistant } from 'custom-card-helpers';
 
-import { CARD_VERSION} from './const';
-import ITsclockConfig from './ITsclockConfig';
+import ItsclockConfig from './ItsclockConfig';
+
+import { version, name } from '../package.json'
 
 console.info(
-    `%c  TIX-SIMPLE-CLOCK  %c  Version ${CARD_VERSION}    `,
+  `%c  ${name.toUpperCase()}  %c  Version ${version}    `,
     'color: white; font-weight: bold; background: crimson',
-    'color: white; font-weight: bold; background: dimgray',
+    'color: #000; font-weight: bold; background: #ddd',
 );
 
 
@@ -34,11 +35,11 @@ export class Tsclock extends LitElement {
     @property({attribute: false}) public hass!: HomeAssistant;
     @state() private _firstLine = '';
     @state() private _secondLine = '';
-    @state() private _config?: ITsclockConfig;
+    @state() private _config?: ItsclockConfig;
     @state() private _interval = 1000;
     private _intervalId?: number;
 
-    public setConfig(config: ITsclockConfig): void {
+    public setConfig(config: ItsclockConfig): void {
         this._config = {...config};
         if (this._config.timeFormat)
             this._config.firstLineFormat = this._config.timeFormat;

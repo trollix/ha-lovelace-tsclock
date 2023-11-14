@@ -2,17 +2,20 @@
 
 A simple clock card for Home Assistant
 
-[![GitHub Release][releases-shield]][releases]
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
-[![License][license-shield]](LICENSE.md)
+![Simple Clock](https://img.shields.io/github/v/release/trollix/ha-lovelace-tsclock)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![Image of iSimple Clock Card](https://github.com/wassy92x/lovelace-digital-clock/blob/master/.images/digital-clock.png?raw=true)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=flat)](https://github.com/custom-components/hacs)
+
+
+
+![Image of Simple Clock Card](https://github.com/trollix/ha-lovelace-tsclock/blob/main/img01-fr.png?raw=true)
 
 ## Options
 
 | Name              | Type    | Requirement  | Description                                 | Default             |
 | ----------------- | ------- | ------------ | ------------------------------------------- | ------------------- |
-| type              | string  | **Required** | `custom:digital-clock`                      |                     |
+| type              | string  | **Required** | `custom:ha-tsclock`                      |                     |
 | locale            | string  | **Optional** | Locale to use for formatting. For example `de` | locale set in your home assistant profile otherwise your browser locale |
 | timeZone          | string  | **Optional** | Time zone to use. For example `Europe/Berlin` | time zone set in your home assistant profile otherwise your browser time zone |
 | firstLineFormat &#124; timeFormat   | object &#124; string | **Optional** | Format of first line           | { hour: '2-digit', minute: '2-digit' } |
@@ -28,7 +31,7 @@ If `timeFormat` is specified, it will override `firstLineFormat` and `dateFormat
 
 # Example
 ```
-type: 'custom:digital-clock'
+type: 'custom:ha-tsclock'
 dateFormat:
   weekday: 'long'
   day: '2-digit'
@@ -38,6 +41,6 @@ timeFormat:
   minute: '2-digit'
 ```
 
-[license-shield]: https://img.shields.io/github/license/wassy92x/lovelace-digital-clock.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/wassy92x/lovelace-digital-clock.svg?style=for-the-badge
-[releases]: https://github.com/wassy92x/lovelace-digital-clock/releases
+[license-shield]: https://img.shields.io/github/license/trollix/ha-lovelace-tsclock.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/trollix/ha-lovelace-tsclock.svg?style=for-the-badge
+[releases]: https://github.com/trollix/ha-lovelace-tsclock/releases
