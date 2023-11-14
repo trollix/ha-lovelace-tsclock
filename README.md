@@ -15,11 +15,11 @@ A simple clock card for Home Assistant
 
 | Name              | Type    | Requirement  | Description                                 | Default             |
 | ----------------- | ------- | ------------ | ------------------------------------------- | ------------------- |
-| type              | string  | **Required** | `custom:ha-tsclock`                      |                     |
-| locale            | string  | **Optional** | Locale to use for formatting. For example `de` | locale set in your home assistant profile otherwise your browser locale |
-| timeZone          | string  | **Optional** | Time zone to use. For example `Europe/Berlin` | time zone set in your home assistant profile otherwise your browser time zone |
-| firstLineFormat &#124; timeFormat   | object &#124; string | **Optional** | Format of first line           | { hour: '2-digit', minute: '2-digit' } |
-| secondLineFormat &#124; dateFormat | object  &#124; string  | **Optional** | Format of second line        | { weekday: 'short', day: '2-digit', month: 'short' } |
+| type              | string  | **Required** | `custom:ha-tsclock`                         |                     |
+| locale            | string  | **Optional** | Locale to use for formatting. For example `fr` | locale set in your home assistant profile otherwise your browser locale |
+| timeZone          | string  | **Optional** | Time zone to use. For example `Europe/Paris`   | time zone set in your home assistant profile otherwise your browser time zone |
+| firstLineFormat or timeFormat  | object or string | **Optional** | Format of first line         | { hour: '2-digit', minute: '2-digit' } |
+| secondLineFormat or dateFormat | object or string | **Optional** | Format of second line        | { weekday: 'short', day: '2-digit', month: 'short' } |
 
 If `firstLineFormat` respectively `secondLineFormat` is a string, it can be every format, which is valid in Luxon.
 See: [https://moment.github.io/luxon/#/formatting?id=toformat](https://moment.github.io/luxon/#/formatting?id=toformat)
@@ -29,8 +29,10 @@ See: [https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-
 
 If `timeFormat` is specified, it will override `firstLineFormat` and `dateFormat` will override `secondLineFormat`.
 
-# Example
-```
+## Example 1
+
+```yaml
+
 type: 'custom:ha-tsclock'
 dateFormat:
   weekday: 'long'
@@ -41,6 +43,18 @@ timeFormat:
   minute: '2-digit'
 ```
 
-[license-shield]: https://img.shields.io/github/license/trollix/ha-lovelace-tsclock.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/trollix/ha-lovelace-tsclock.svg?style=for-the-badge
-[releases]: https://github.com/trollix/ha-lovelace-tsclock/releases
+## Example 2 - with tokens
+
+See: [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)
+
+```yaml
+
+type: custom:ha-tsclock
+dateFormat: cccc dd LLLL
+timeFormat: HH:mm
+capitalize: true
+
+```
+
+[![releases-shield](https://img.shields.io/github/release-date/trollix/ha-lovelace-tsclock)](https://img.shields.io/github/release-date/trollix/ha-lovelace-tsclock)
+[![License-schield](https://img.shields.io/github/license/trollix/ha-lovelace-tsclock)](https://img.shields.io/github/license/trollix/ha-lovelace-tsclock)
