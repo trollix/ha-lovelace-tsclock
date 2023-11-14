@@ -4,7 +4,7 @@ import { DateTime } from 'luxon';
 import { HomeAssistant } from 'custom-card-helpers';
 
 import ItsclockConfig from './ItsclockConfig';
-
+//import ephemeris from './ephemeris.js'
 import { version, name } from '../package.json'
 
 console.info(
