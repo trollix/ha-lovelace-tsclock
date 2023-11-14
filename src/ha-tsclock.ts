@@ -131,6 +131,10 @@ export class Tsclock extends LitElement {
             let str = this._secondLine;
             str = str[0].toUpperCase() + str.slice(1);
             this._secondLine = str;
+
+            const mySentence = this._secondLine;
+            const finalSentence = mySentence.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+            this._secondLine = finalSentence;
         }
             
     }

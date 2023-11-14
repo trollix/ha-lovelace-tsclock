@@ -1,6 +1,6 @@
 {
   "name": "ha-tsclock",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Home Assistant Simple Clock",
   "keywords": [
     "home-assistant",
