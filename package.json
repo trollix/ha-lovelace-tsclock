@@ -1,7 +1,7 @@
 {
-  "name": "ha-lovelace-tsclock",
-  "version": "0.1.6",
-  "description": "Home Assistant Digital Clock",
+  "name": "ha-tsclock",
+  "version": "0.2.0",
+  "description": "Home Assistant Simple Clock",
   "keywords": [
     "home-assistant",
     "homeassistant",
@@ -10,13 +10,13 @@
     "lovelace",
     "custom-cards"
   ],
-  "main": "dist/DigitalClock.js",
+  "main": "dist/ha-tsclock.js",
   "files": [
     "/dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trollix/ha-lovelace-tsclock"
+    "url": "git+https://github.com/trollix/ha-tsclock"
   },
   "author": "Trollix <trollix@gmail.com>",
   "license": "MIT",

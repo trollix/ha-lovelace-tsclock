@@ -1,5 +1,5 @@
 {
-    "name": "Digital Clock",
+    "name": "Simple Clock",
     "render_readme": true,
-    "filename": "DigitalClock.js"
+    "filename": "ha-tsclock.js"
 }

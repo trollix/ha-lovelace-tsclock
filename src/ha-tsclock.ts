@@ -4,7 +4,7 @@ import { DateTime } from 'luxon';
 import { HomeAssistant } from 'custom-card-helpers';
 
 import { CARD_VERSION} from './const';
-import IDigitalClockConfig from './IDigitalClockConfig';
+import ITsclockConfig from './ITsclockConfig';
 
 console.info(
     `%c  TIX-SIMPLE-CLOCK  %c  Version ${CARD_VERSION}    `,
@@ -22,23 +22,23 @@ const windowWithCards = window as unknown as WindowWithCards;
 windowWithCards.customCards = windowWithCards.customCards || [];
 windowWithCards.customCards.push({
     type: 'ha-tsclock',
-    name: "HA-TsClock",
+    name: "HA-tsclock",
     preview: true,
-    description: "A digital clock component"
+    description: "A simple clock component"
 });
 
 
 
 @customElement('ha-tsclock')
-export class DigitalClock extends LitElement {
+export class Tsclock extends LitElement {
     @property({attribute: false}) public hass!: HomeAssistant;
     @state() private _firstLine = '';
     @state() private _secondLine = '';
-    @state() private _config?: IDigitalClockConfig;
+    @state() private _config?: ITsclockConfig;
     @state() private _interval = 1000;
     private _intervalId?: number;
 
-    public setConfig(config: IDigitalClockConfig): void {
+    public setConfig(config: ITsclockConfig): void {
         this._config = {...config};
         if (this._config.timeFormat)
             this._config.firstLineFormat = this._config.timeFormat;
