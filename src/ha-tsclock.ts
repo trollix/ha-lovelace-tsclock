@@ -4,7 +4,7 @@ import { DateTime } from 'luxon';
 import { HomeAssistant } from 'custom-card-helpers';
 
 import ItsclockConfig from './ItsclockConfig';
-//import ephemeris from './ephemeris.js'
+import { Ephemeris } from './ephemeris'
 import { version, name } from '../package.json'
 
 console.info(
@@ -91,6 +91,7 @@ export class Tsclock extends LitElement {
         const timeZone = this._config?.timeZone ?? this.hass?.config?.time_zone;
         const locale = this._config?.locale ?? this.hass?.locale?.language;
         const capitalize = this._config?.capitalize ?? "false";
+        const ephemerize = this._config?.ephemerize ?? "false";
 
         let dateTime: DateTime = DateTime.local();
         /* if (!this._config?.useHATime) {
@@ -135,6 +136,12 @@ export class Tsclock extends LitElement {
             const mySentence = this._secondLine;
             const finalSentence = mySentence.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
             this._secondLine = finalSentence;
+        }
+
+        if (ephemerize) {
+
+            const str = Ephemeris.getEphemeris(1,1);
+            this._secondLine = this._secondLine + str;
         }
             
     }
