@@ -35,6 +35,7 @@ export class Tsclock extends LitElement {
     @property({attribute: false}) public hass!: HomeAssistant;
     @state() private _firstLine = '';
     @state() private _secondLine = '';
+    @state() private _thirdLine = '';
     @state() private _config?: ItsclockConfig;
     @state() private _interval = 1000;
     private _intervalId?: number;
@@ -50,7 +51,7 @@ export class Tsclock extends LitElement {
     }
 
     protected shouldUpdate(changedProps: PropertyValues): boolean {
-        return changedProps.has('_firstLine') || changedProps.has('_secondLine') || changedProps.has('_config') || changedProps.has('hass');
+        return changedProps.has('_firstLine') || changedProps.has('_secondLine') || changedProps.has('_thirdLine') || changedProps.has('_config') || changedProps.has('hass');
     }
 
     public async getCardSize(): Promise<number> {
@@ -142,7 +143,7 @@ export class Tsclock extends LitElement {
             const n_day:number = Number(dateTime.toFormat('d'));
             const n_month:number = Number(dateTime.toFormat('M'));
             const str = Ephemeris.getEphemeris(n_day, n_month);
-            this._secondLine = this._secondLine + ' ' + str;
+            this._thirdLine = this._thirdLine + ' ' + str;
         }
             
     }
@@ -157,6 +158,7 @@ export class Tsclock extends LitElement {
             <ha-card>
                 <span class="first-line">${this._firstLine}</span>
                 <span class="second-line">${this._secondLine}</span>
+                <span class="third-line">${this._thirdLine}</span>
             </ha-card>
         `;
     }
