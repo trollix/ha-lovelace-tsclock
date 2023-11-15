@@ -4,7 +4,7 @@ import { DateTime } from 'luxon';
 import { HomeAssistant } from 'custom-card-helpers';
 
 import ItsclockConfig from './ItsclockConfig';
-import { Ephemeris } from './ephemeris'
+import { Ephemeris } from './ephemeris_class'
 import { version, name } from '../package.json'
 
 console.info(
@@ -128,7 +128,7 @@ export class Tsclock extends LitElement {
         if (secondLine !== this._secondLine)
             this._secondLine = secondLine;
 
-        if (capitalize) {
+        if (capitalize===true) {
             let str = this._secondLine;
             str = str[0].toUpperCase() + str.slice(1);
             this._secondLine = str;
@@ -138,7 +138,7 @@ export class Tsclock extends LitElement {
             this._secondLine = finalSentence;
         }
 
-        if (ephemerize) {
+        if (ephemerize===true) {
             const n_day:number = Number(dateTime.toFormat('d'));
             const n_month:number = Number(dateTime.toFormat('M'));
             const str = Ephemeris.getEphemeris(n_day, n_month);
