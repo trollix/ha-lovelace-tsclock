@@ -139,9 +139,10 @@ export class Tsclock extends LitElement {
         }
 
         if (ephemerize) {
-
-            const str = Ephemeris.getEphemeris(1,1);
-            this._secondLine = this._secondLine + str;
+            const n_day:number = Number(dateTime.toFormat('d'));
+            const n_month:number = Number(dateTime.toFormat('M'));
+            const str = Ephemeris.getEphemeris(n_day, n_month);
+            this._secondLine = this._secondLine + ' ' + str;
         }
             
     }

@@ -1,8 +1,8 @@
 import { SAINT_OF_A_DAY_FR} from './ephemeris_constants'
 
-  export class Ephemeris {
+export class Ephemeris {
+    
     // ... autres propriétés et méthodes ...
-
     /**
      * Get the month raw output.
      *
@@ -44,24 +44,36 @@ import { SAINT_OF_A_DAY_FR} from './ephemeris_constants'
   
         try {
             const monthData = Ephemeris.getMonth(month);
-
             if (!monthData) {
                 return undefined; // Mois invalide
             }
 
             const saintOfDay = monthData[day - 1];
-
             if (!saintOfDay) {
                 return undefined; // Données indisponibles pour le jour spécifié
             }
 
             const prefix = saintOfDay[1];
             return (prefix === '') ? saintOfDay[0] : `${prefix} ${saintOfDay[0]}`;
+
         } catch (err) {
             console.error("Une erreur s'est produite :", err);
             return undefined;
         }
     }
 
-
+    static getEphemerisName(day:number, month:number): string | undefined {
+  
+      try {
+          const monthData = Ephemeris.getMonth(month)?.[day - 1][0];
+          if (!monthData) {
+              return undefined; // Mois invalide
+          } else {
+              return monthData;
+          }
+      } catch (err) {
+          console.error("Une erreur s'est produite :", err);
+          return undefined;
+      }
+    }
 }
