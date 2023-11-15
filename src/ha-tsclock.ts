@@ -8,7 +8,7 @@ import { Ephemeris } from './ephemeris_class'
 import { version, name } from '../package.json'
 
 console.info(
-  `%c  ${name.toUpperCase()}  %c  Version ${version}    `,
+  `%c  ${name.toUpperCase()}  %c  Version ${version}  `,
     'color: white; font-weight: bold; background: crimson',
     'color: #000; font-weight: bold; background: #ddd',
 );
