@@ -2,14 +2,14 @@
 
 A simple clock card for Home Assistant
 
-![Simple Clock](https://img.shields.io/github/v/release/trollix/ha-lovelace-tsclock)
+![Simple Clock](https://img.shields.io/github/v/release/trollix/ha-tsclock-card)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=flat)](https://github.com/custom-components/hacs)
 
 
 
-![Image of Simple Clock Card](https://github.com/trollix/ha-lovelace-tsclock/blob/main/img01-fr.png?raw=true)
+![Image of Simple Clock Card](https://github.com/trollix/ha-tsclock-card/blob/main/img01-fr.png?raw=true)
 
 ## Options
 
@@ -56,5 +56,5 @@ capitalize: true
 
 ```
 
-[![releases-shield](https://img.shields.io/github/release-date/trollix/ha-lovelace-tsclock)](https://img.shields.io/github/release-date/trollix/ha-lovelace-tsclock)
-[![License-schield](https://img.shields.io/github/license/trollix/ha-lovelace-tsclock)](https://img.shields.io/github/license/trollix/ha-lovelace-tsclock)
+[![releases-shield](https://img.shields.io/github/release-date/trollix/ha-tsclock-card)](https://img.shields.io/github/release-date/trollix/ha-tsclock-card)
+[![License-schield](https://img.shields.io/github/license/trollix/ha-tsclock-card)](https://img.shields.io/github/license/trollix/ha-tsclock-card)
