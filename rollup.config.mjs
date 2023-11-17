@@ -32,7 +32,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/ha-tsclock.ts',
+    input: 'src/tsclock-card.ts',
     output: {
       dir: './dist',
       format: 'es',

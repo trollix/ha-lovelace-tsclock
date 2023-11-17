@@ -22,15 +22,15 @@ console.info(
 const windowWithCards = window as unknown as WindowWithCards;
 windowWithCards.customCards = windowWithCards.customCards || [];
 windowWithCards.customCards.push({
-    type: 'ha-tsclock',
-    name: "HA-tsclock",
+    type: 'tsclock-card',
+    name: "tsclock-card",
     preview: true,
     description: "A simple clock component"
 });
 
 
 
-@customElement('ha-tsclock')
+@customElement('tsclock-card')
 export class Tsclock extends LitElement {
     @property({attribute: false}) public hass!: HomeAssistant;
     @state() private _firstLine = '';

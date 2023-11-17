@@ -1,6 +1,6 @@
 {
-  "name": "ha-tsclock",
-  "version": "0.3.10",
+  "name": "tsclock-card",
+  "version": "0.4.0",
   "description": "Home Assistant Simple Clock",
   "keywords": [
     "home-assistant",
@@ -10,13 +10,13 @@
     "lovelace",
     "custom-cards"
   ],
-  "main": "dist/ha-tsclock.js",
+  "main": "dist/tsclock-card.js",
   "files": [
     "/dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trollix/ha-tsclock"
+    "url": "git+https://github.com/trollix/ha-tsclock-card"
   },
   "author": "Trollix <trollix@gmail.com>",
   "license": "MIT",

@@ -33,7 +33,7 @@ If `timeFormat` is specified, it will override `firstLineFormat` and `dateFormat
 
 ```yaml
 
-type: 'custom:ha-tsclock'
+type: 'custom:tsclock-card'
 dateFormat:
   weekday: 'long'
   day: '2-digit'
@@ -49,7 +49,7 @@ See: [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://mo
 
 ```yaml
 
-type: custom:ha-tsclock
+type: custom:tsclock-card
 dateFormat: cccc dd LLLL
 timeFormat: HH:mm
 capitalize: true

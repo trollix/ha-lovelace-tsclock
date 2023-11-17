@@ -1,5 +1,5 @@
 {
     "name": "Simple Clock",
     "render_readme": true,
-    "filename": "ha-tsclock.js"
+    "filename": "tsclock-card.js"
 }
