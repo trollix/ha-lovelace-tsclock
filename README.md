@@ -7,8 +7,6 @@ A simple clock card for Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=flat)](https://github.com/custom-components/hacs)
 
-
-
 ![Image of Simple Clock Card](https://github.com/trollix/ha-tsclock-card/blob/main/img01-fr.png?raw=true)
 
 ## Options
