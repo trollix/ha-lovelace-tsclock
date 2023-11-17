@@ -54,7 +54,7 @@ export class Ephemeris {
             }
 
             const prefix = saintOfDay[1];
-            return (prefix === '') ? saintOfDay[0] : `${prefix} ${saintOfDay[0]}`;
+            return (prefix === '') ? saintOfDay[0] : `${prefix}-${saintOfDay[0]}`;
 
         } catch (err) {
             console.error("Une erreur s'est produite :", err);
