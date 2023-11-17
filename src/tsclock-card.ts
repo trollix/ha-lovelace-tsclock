@@ -158,7 +158,7 @@ export class Tsclock extends LitElement {
             <ha-card>
                 <span class="first-line">${this._firstLine}</span>
                 <span class="second-line">${this._secondLine}</span>
-                <span class="third-line">${this._thirdLine}</span>
+                <span class="third-line">---<br />${this._thirdLine}</span>
             </ha-card>
         `;
     }
