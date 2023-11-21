@@ -1,6 +1,6 @@
 {
   "name": "tsclock-card",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Home Assistant Simple Clock",
   "keywords": [
     "home-assistant",
@@ -31,10 +31,10 @@
     "@babel/plugin-transform-class-properties": "^7.23.3",
     "@babel/plugin-proposal-decorators": "^7.23.3",
     "@babel/plugin-syntax-decorators": "^7.23.3",
-    "@types/luxon": "^3.3.4",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
-    "eslint": "^8.53.0",
+    "@types/luxon": "^3.3.5",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-simple-import-sort": "10.0.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -51,7 +51,7 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
 
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "scripts": {
     "start": "rollup -c rollup.config.dev.js --watch",

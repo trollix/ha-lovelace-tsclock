@@ -345,7 +345,7 @@ export const SAINT_OF_A_DAY_FR = {
       ["Aude", "Sainte"],
       ["Tanguy", "Saint"],
       ["Edmond", "Saint"],
-      ["Présence de Marie", ""],
+      ["Présentation de Marie", ""],
       ["Cécile", "Sainte"],
       ["Clément", "Saint"],
       ["Flora", "Sainte"],
