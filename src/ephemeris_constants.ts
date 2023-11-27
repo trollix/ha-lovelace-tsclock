@@ -351,7 +351,7 @@ export const SAINT_OF_A_DAY_FR = {
       ["Flora", "Sainte"],
       ["Catherine", "Sainte"],
       ["Delphine", "Sainte"],
-      ["Sévrin", "Saint"],
+      ["Séverin", "Saint"],
       ["Jacques de la Marche", "Saint"],
       ["Saturnin", "Saint"],
       ["André", "Saint"]
